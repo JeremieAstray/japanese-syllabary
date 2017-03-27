@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+      prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.jeremie.MainController">
+    <children>
+        <Label fx:id="content" alignment="CENTER" contentDisplay="CENTER" prefHeight="255.0" prefWidth="600.0" text="a"
+               textAlignment="CENTER">
+            <font>
+                <Font size="40.0"/>
+            </font>
+        </Label>
+        <Button onAction="#random" layoutX="70.0" layoutY="285.0" mnemonicParsing="false" prefHeight="50.0"
+                prefWidth="100.0" text="随机"/>
+        <Button onAction="#showHiragana" layoutX="190.0" layoutY="285.0" mnemonicParsing="false" prefHeight="50.0"
+                prefWidth="100.0" text="片假名"/>
+        <Button onAction="#showRoma" layoutX="310.0" layoutY="285.0" mnemonicParsing="false" prefHeight="50.0"
+                prefWidth="100.0" text="罗马音"/>
+        <Button onAction="#showFullContent" layoutX="430.0" layoutY="285.0" mnemonicParsing="false" prefHeight="50.0"
+                prefWidth="100.0" text="完整"/>
+    </children>
+</Pane>
