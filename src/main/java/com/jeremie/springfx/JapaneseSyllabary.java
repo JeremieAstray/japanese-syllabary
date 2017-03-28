@@ -1,4 +1,4 @@
-package com.jeremie;
+package com.jeremie.springfx;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,8 +1,10 @@
-package com.jeremie;
+package com.jeremie.springfx.controller;
 
+import com.jeremie.springfx.JapaneseSyllabary;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import org.springframework.stereotype.Controller;
 
 import java.net.URL;
 import java.util.Random;
@@ -11,6 +13,7 @@ import java.util.ResourceBundle;
 /**
  * @author guanhong 2017/3/27.
  */
+@Controller
 public class MainController implements Initializable {
 
     private JapaneseSyllabary[] japaneseSyllabaries = JapaneseSyllabary.getSyllabarys();
