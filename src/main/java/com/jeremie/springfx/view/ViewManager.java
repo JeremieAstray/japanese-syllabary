@@ -18,8 +18,8 @@ public class ViewManager {
 
     private final static Logger logger = LoggerFactory.getLogger(ViewManager.class);
 
-    private final static int WIDTH = 600;
-    private final static int HEIGHT = 400;
+    private final static double WIDTH = 600;
+    private final static double HEIGHT = 400;
 
     private Stage stage;
     private Scene scene;
@@ -43,6 +43,8 @@ public class ViewManager {
         this.scene = new Scene(this.mainPane, WIDTH, HEIGHT);
         this.stage.setScene(scene);
         this.stage.setTitle("五十音背诵小工具");
+        this.stage.setMinHeight(HEIGHT);
+        this.stage.setMinWidth(WIDTH);
         this.stage.show();
     }
 }
