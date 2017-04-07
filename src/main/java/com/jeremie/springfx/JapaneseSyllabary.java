@@ -25,7 +25,7 @@ public enum JapaneseSyllabary {
     _ko("ko", "こ", "コ", SoundType.unvoiced, "ko.wav"),
 
     _sa("sa", "さ", "サ", SoundType.unvoiced, "sa.wav"),
-    _si("si", "し", "シ", SoundType.unvoiced, "si.wav"),
+    _si("si", "し", "シ", SoundType.unvoiced, "shi.wav"),
     _su("su", "す", "ス", SoundType.unvoiced, "su.wav"),
     _se("se", "せ", "セ", SoundType.unvoiced, "se.wav"),
     _so("so", "そ", "ソ", SoundType.unvoiced, "so.wav"),
@@ -69,7 +69,7 @@ public enum JapaneseSyllabary {
     _wa("wa", "わ", "ワ", SoundType.unvoiced, "wa.wav"),
     _i_w("i(w)", "い", "イ", SoundType.unvoiced, "i(w).wav"),
     _u_w("u(w)", "う", "ウ", SoundType.unvoiced, "u(w).wav"),
-    _e_w("e(w)", "え", "エ", SoundType.unvoiced, "w(w).wav"),
+    _e_w("e(w)", "え", "エ", SoundType.unvoiced, "e(w).wav"),
     _o_w("o(w)", "を", "ヲ", SoundType.unvoiced, "o(w).wav"),//wo
 
     _n("n", "ん", "ン", SoundType.unvoiced, "n.wav"),
