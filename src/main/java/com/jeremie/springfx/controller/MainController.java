@@ -1,6 +1,7 @@
 package com.jeremie.springfx.controller;
 
 import com.jeremie.springfx.JapaneseSyllabary;
+import com.jeremie.springfx.effect.EffectMedia;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -24,33 +25,34 @@ public class MainController implements Initializable {
     private Label content;
 
     private void randomSyllabary() {
-        japaneseSyllabary = japaneseSyllabaries.get(random.nextInt(japaneseSyllabaries.size()));
+        this.japaneseSyllabary = this.japaneseSyllabaries.get(this.random.nextInt(this.japaneseSyllabaries.size()));
     }
 
     @FXML
     public void random() {
         randomSyllabary();
-        this.content.setText(japaneseSyllabary.getPhonetic());
+        this.content.setText(this.japaneseSyllabary.getPhonetic());
     }
 
     @FXML
     public void showHiragana() {
-        this.content.setText(japaneseSyllabary.getHiragana());
+        this.content.setText(this.japaneseSyllabary.getHiragana());
     }
 
     @FXML
     public void showRoma() {
-        this.content.setText(japaneseSyllabary.getPhonetic());
+        this.content.setText(this.japaneseSyllabary.getPhonetic());
     }
 
     @FXML
     public void showFullContent() {
-        this.content.setText(japaneseSyllabary.toString());
+        this.content.setText(this.japaneseSyllabary.toString());
+        this.playSound();
     }
 
     @FXML
     public void playSound() {
-
+        EffectMedia.play(this.japaneseSyllabary.getPronunciation());
     }
 
     @Override
