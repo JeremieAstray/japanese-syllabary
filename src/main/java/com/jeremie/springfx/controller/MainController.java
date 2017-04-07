@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import org.springframework.stereotype.Controller;
 
 import java.net.URL;
+import java.util.List;
 import java.util.Random;
 import java.util.ResourceBundle;
 
@@ -16,14 +17,14 @@ import java.util.ResourceBundle;
 @Controller
 public class MainController implements Initializable {
 
-    private JapaneseSyllabary[] japaneseSyllabaries = JapaneseSyllabary.getSyllabarys();
+    private List<JapaneseSyllabary> japaneseSyllabaries = JapaneseSyllabary.getUnvoicedSyllabaryList();
     private Random random = new Random(System.currentTimeMillis());
     private JapaneseSyllabary japaneseSyllabary;
     @FXML
     private Label content;
 
     private void randomSyllabary() {
-        japaneseSyllabary = japaneseSyllabaries[random.nextInt(japaneseSyllabaries.length)];
+        japaneseSyllabary = japaneseSyllabaries.get(random.nextInt(japaneseSyllabaries.size()));
     }
 
     @FXML
@@ -45,6 +46,10 @@ public class MainController implements Initializable {
     @FXML
     public void showFullContent() {
         this.content.setText(japaneseSyllabary.toString());
+    }
+
+    @FXML
+    public void playSound() {
 
     }
 
