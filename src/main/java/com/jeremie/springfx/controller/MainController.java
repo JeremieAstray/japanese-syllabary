@@ -2,6 +2,7 @@ package com.jeremie.springfx.controller;
 
 import com.jeremie.springfx.JapaneseSyllabary;
 import com.jeremie.springfx.effect.EffectMedia;
+import com.jeremie.springfx.view.ViewManager;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -40,6 +41,11 @@ public class MainController implements Initializable {
     }
 
     @FXML
+    public void showtKatakana() {
+        this.content.setText(this.japaneseSyllabary.getKatakana());
+    }
+
+    @FXML
     public void showRoma() {
         this.content.setText(this.japaneseSyllabary.getPhonetic());
     }
@@ -58,5 +64,10 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         random();
+    }
+
+    @FXML
+    public void changeMapPane() {
+        ViewManager.changeMapPane();
     }
 }

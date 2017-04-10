@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<ScrollPane fx:id="scrollPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="600.0"
+            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.jeremie.springfx.controller.MapController">
+    <content>
+        <AnchorPane fx:id="anchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                    prefWidth="598.0">
+            <children>
+                <TabPane fx:id="tabPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                         minWidth="580.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0"
+                         AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                    <tabs>
+                        <Tab text="平假名">
+                            <content>
+                                <StackPane maxWidth="580.0" minWidth="580.0" prefHeight="200.0" prefWidth="580.0"/>
+                            </content>
+                        </Tab>
+                        <Tab text="片假名">
+                            <content>
+                                <StackPane maxWidth="580.0" minWidth="580.0" prefHeight="200.0" prefWidth="580.0"/>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+                <GridPane fx:id="backButton" alignment="CENTER" prefHeight="40.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0"
+                          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                    <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#changeMainPane" prefHeight="50.0"
+                                prefWidth="80.0" text="五十音图" GridPane.columnIndex="0" GridPane.halignment="CENTER"
+                                GridPane.valignment="CENTER"/>
+                    </children>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                </GridPane>
+            </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>
